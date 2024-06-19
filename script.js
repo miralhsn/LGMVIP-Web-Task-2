@@ -1,19 +1,31 @@
-const form = document.getElementById('registrationForm');
-const displayData = document.getElementById('displayData');
-
-form.addEventListener('submit', function(event) {
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const fullName = document.getElementById('fullName').value;
+    const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const gender = document.getElementById('gender').value;
+    const taxPayer = document.getElementById('taxPayer').value;
+    const occupation = document.getElementById('occupation').value;
+    const profilePicture = document.getElementById('profilePicture').files[0];
 
-    const userData = `
-        <h3>Registration Successful!</h3>
-        <p><strong>Full Name:</strong> ${fullName}</p>
+    const displayData = document.getElementById('displayData');
+    displayData.innerHTML = `
+        <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Password:</strong> ${password}</p>
+        <p><strong>Gender:</strong> ${gender}</p>
+        <p><strong>Tax Payer:</strong> ${taxPayer}</p>
+        <p><strong>Occupation:</strong> ${occupation}</p>
     `;
 
-    displayData.innerHTML = userData;
+    if (profilePicture) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const img = document.createElement('img');
+            img.src = e.target.result;
+            img.style.maxWidth = '100px';
+            img.style.borderRadius = '50%';
+            displayData.appendChild(img);
+        }
+        reader.readAsDataURL(profilePicture);
+    }
 });

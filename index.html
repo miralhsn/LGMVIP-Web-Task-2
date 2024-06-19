@@ -8,25 +8,42 @@
 </head>
 <body>
     <div class="container">
-        <h2>Registration Form</h2>
-        <form id="registrationForm">
-            <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" required><br><br>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
-            
-            <button type="submit">Register</button>
-        </form>
-        
-        <div id="displayData">
-            <!-- Data will be displayed here -->
+        <div class="form-container">
+            <h2>Registration Form</h2>
+            <form id="registrationForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                
+                <label for="taxPayer">Tax Payer:</label>
+                <select id="taxPayer" name="taxPayer" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                
+                <label for="occupation">Occupation:</label>
+                <input type="text" id="occupation" name="occupation" required>
+                
+                <label for="profilePicture">Profile Picture:</label>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="display-container">
+            <h2>Submitted Data</h2>
+            <div id="displayData"></div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
