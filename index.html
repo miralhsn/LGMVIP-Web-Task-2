@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="form-container box">
+        <div class="form-container">
             <h2>Registration Form</h2>
             <form id="registrationForm">
                 <label for="name">Name:</label>
@@ -17,35 +17,32 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 
-                <label for="gender">Gender:</label>
-                <select id="gender" name="gender" required>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
-                </select>
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female" required> Female</label>
                 
                 <label for="taxPayer">Tax Payer:</label>
-                <select id="taxPayer" name="taxPayer" required>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
+                <label><input type="radio" name="taxPayer" value="Yes" required> Yes</label>
+                <label><input type="radio" name="taxPayer" value="No" required> No</label>
                 
                 <label for="occupation">Occupation:</label>
                 <input type="text" id="occupation" name="occupation" required>
                 
-                <label for="profilePicture">Profile Picture (Optional):</label>
-                <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                <label for="imageLink">Profile Picture (optional):</label>
+                <input type="url" id="imageLink" name="imageLink">
                 
-                <label for="notes">Additional Notes (Optional):</label>
+                <label for="notes">Additional Notes (optional):</label>
                 <textarea id="notes" name="notes"></textarea>
                 
-                <button type="submit">Submit</button>
+                <div class="buttons">
+                    <button type="submit">Enter Details</button>
+                    <button type="reset">Clear Form</button>
+                </div>
             </form>
         </div>
-        <div class="display-container box">
-            <h2>Submitted Data</h2>
-            <div id="displayData"></div>
-            <div id="entryCount"></div>
+        <div class="display-container">
+            <h2>Submitted Entries</h2>
+            <div id="submittedEntries"></div>
         </div>
     </div>
     <script src="script.js"></script>
