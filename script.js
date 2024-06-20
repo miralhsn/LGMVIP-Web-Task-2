@@ -28,6 +28,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     `;
 
     submittedEntries.appendChild(entry);
+    submittedEntries.appendChild(document.createElement('hr'));
 
     document.getElementById('registrationForm').reset();
 });
