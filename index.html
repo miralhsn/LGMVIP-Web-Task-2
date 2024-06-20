@@ -17,9 +17,12 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 
-                <label>Gender:</label>
-                <label><input type="radio" name="gender" value="Male" required> Male</label>
-                <label><input type="radio" name="gender" value="Female" required> Female</label>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
                 
                 <label>Tax Payer:</label>
                 <label><input type="radio" name="taxPayer" value="Yes" required> Yes</label>
@@ -28,8 +31,8 @@
                 <label for="occupation">Occupation:</label>
                 <input type="text" id="occupation" name="occupation" required>
                 
-                <label for="imageLink">Profile Picture (optional):</label>
-                <input type="url" id="imageLink" name="imageLink">
+                <label for="imageUpload">Profile Picture (optional):</label>
+                <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
                 
                 <label for="notes">Additional Notes (optional):</label>
                 <textarea id="notes" name="notes"></textarea>

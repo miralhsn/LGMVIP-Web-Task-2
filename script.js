@@ -3,32 +3,43 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const gender = document.querySelector('input[name="gender"]:checked').value;
+    const gender = document.getElementById('gender').value;
     const taxPayer = document.querySelector('input[name="taxPayer"]:checked').value;
     const occupation = document.getElementById('occupation').value;
-    const imageLink = document.getElementById('imageLink').value;
+    const imageUpload = document.getElementById('imageUpload').files[0];
     const notes = document.getElementById('notes').value;
 
     const submittedEntries = document.getElementById('submittedEntries');
     const entry = document.createElement('div');
     entry.classList.add('entry');
 
-    entry.innerHTML = `
-        <div>
-            <p><strong>${name}</strong></p>
-            <p>${gender}</p>
-            <p>${email}</p>
-            <p>${taxPayer}</p>
-            <p>${occupation}</p>
-            ${notes ? `<p>Notes: ${notes}</p>` : ''}
-        </div>
-        <div>
-            ${imageLink ? `<img src="${imageLink}" alt="${name}'s picture">` : ''}
-        </div>
-    `;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const imageUrl = imageUpload ? e.target.result : '';
 
-    submittedEntries.appendChild(entry);
-    submittedEntries.appendChild(document.createElement('hr'));
+        entry.innerHTML = `
+            <div>
+                <p><strong>${name}</strong></p>
+                <p>${gender}</p>
+                <p>${email}</p>
+                <p>${taxPayer}</p>
+                <p>${occupation}</p>
+                ${notes ? `<p>Notes: ${notes}</p>` : ''}
+            </div>
+            <div>
+                ${imageUrl ? `<img src="${imageUrl}" alt="${name}'s picture">` : ''}
+            </div>
+        `;
 
-    document.getElementById('registrationForm').reset();
+        submittedEntries.appendChild(entry);
+        submittedEntries.appendChild(document.createElement('hr'));
+
+        document.getElementById('registrationForm').reset();
+    };
+
+    if (imageUpload) {
+        reader.readAsDataURL(imageUpload);
+    } else {
+        reader.onload();
+    }
 });
