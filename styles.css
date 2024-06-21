@@ -31,7 +31,6 @@ header {
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-    background-color: #fff;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -52,6 +51,14 @@ header {
     padding-left: 20px;
     max-height: 70vh;
     overflow-y: auto;
+}
+
+.blue-box {
+    background-color: #cfe8fc; /* Light blue background */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow */
 }
 
 h2, h3 {
@@ -77,7 +84,12 @@ form {
 }
 
 .form-group input[type="date"],
-.form-group select {
+.form-group select,
+.form-group textarea,
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"],
+.form-group input[type="radio"] {
     flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
@@ -93,8 +105,13 @@ textarea {
     margin-bottom: 20px;
 }
 
-.optional-details hr {
-    display: none; /* Remove the line under "Picture" */
+.optional-details h3 {
+    text-align: center;
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.optional-details .form-group {
+    margin-bottom: 15px; /* Adjust the space between elements */
 }
 
 .buttons {
