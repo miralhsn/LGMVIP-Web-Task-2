@@ -31,7 +31,9 @@ header {
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
+    background-color: #fff;
     padding: 40px;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -43,12 +45,10 @@ header {
 }
 
 .blue-box {
-    background-color: #cfe8fc; /* Light blue background */
+    background-color: #d9eaf7; 
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-    width: 100%; /* Ensure full width */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow */
 }
 
 form {
@@ -86,9 +86,7 @@ textarea {
 }
 
 .optional-details hr {
-    margin: 20px 0;
-    border: none;
-    border-top: 1px solid #ccc;
+    display: none; /* Remove the line after "Occupation" */
 }
 
 .buttons {
