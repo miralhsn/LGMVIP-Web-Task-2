@@ -4,7 +4,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    background: linear-gradient(to bottom, #e0f7fa, #80deea);
     margin: 0;
     padding: 20px;
     display: flex;
@@ -15,11 +15,14 @@ body {
 
 header {
     width: 100%;
-    background-color: black;
-    padding: 10px;
+    background: linear-gradient(to right, #00bcd4, #009688);
+    padding: 20px;
     text-align: center;
     color: white;
+    font-size: 24px;
+    font-weight: bold;
     margin-bottom: 20px;
+    border-radius: 8px;
 }
 
 .container {
@@ -64,7 +67,7 @@ form {
 .form-group {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .form-group label {
