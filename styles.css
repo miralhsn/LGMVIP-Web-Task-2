@@ -71,6 +71,17 @@ form {
     margin-bottom: 20px;
 }
 
+.optional-details {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.optional-details hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
 .form-group label {
     min-width: 150px;
     margin-right: 20px;

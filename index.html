@@ -1,74 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        Registration Form
-    </header>
-    <div class="container">
-        <div class="form-container">
-            <h2>General Information</h2>
-            <form id="registrationForm">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="dob">Date of Birth:</label>
-                        <input type="date" id="dob" name="dob">
-                    </div>
-                    <div class="form-group">
-                        <label for="gender">Gender:</label>
-                        <select id="gender" name="gender">
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Tax Payer:</label>
-                    <div>
-                        <input type="radio" id="taxYes" name="tax" value="yes">
-                        <label for="taxYes">Yes</label>
-                        <input type="radio" id="taxNo" name="tax" value="no">
-                        <label for="taxNo">No</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="occupation">Occupation:</label>
-                    <input type="text" id="occupation" name="occupation">
-                </div>
-                <div class="form-group">
-                    <label for="profilePicture">Profile Picture (optional):</label>
-                    <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
-                </div>
-                <div class="form-group">
-                    <label for="notes">Additional Notes (optional):</label>
-                    <textarea id="notes" name="notes" rows="3"></textarea>
-                </div>
-                <div class="buttons">
-                    <button type="submit">Enter Details</button>
-                    <button type="reset">Clear Form</button>
-                </div>
-            </form>
+<div class="form-container">
+    <h2>General Information</h2>
+    <form id="registrationForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
         </div>
-        <div class="display-container">
-            <h2>Enrolled Candidates</h2>
-            <div id="entries"></div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
         </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Tax Payer:</label>
+            <div>
+                <input type="radio" id="taxYes" name="tax" value="yes">
+                <label for="taxYes">Yes</label>
+                <input type="radio" id="taxNo" name="tax" value="no">
+                <label for="taxNo">No</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation">
+        </div>
+        <hr>
+        <div class="optional-details">
+            <h3>Optional Details:</h3>
+            <div class="form-group">
+                <label for="profilePicture">Picture:</label>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+            </div>
+            <hr>
+            <div class="form-group">
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes" rows="3"></textarea>
+            </div>
+            <hr>
+        </div>
+        <div class="buttons">
+            <button type="submit">Enter Details</button>
+            <button type="reset">Clear Form</button>
+        </div>
+    </form>
+</div>
