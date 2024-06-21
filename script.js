@@ -5,37 +5,43 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     const email = document.getElementById('email').value;
     const dob = document.getElementById('dob').value;
     const gender = document.getElementById('gender').value;
-    const tax = document.querySelector('input[name="tax"]:checked').value;
+    const taxPayer = document.querySelector('input[name="taxPayer"]:checked').value;
     const occupation = document.getElementById('occupation').value;
-    const profilePicture = document.getElementById('profilePicture').files[0];
+    const imageUpload = document.getElementById('imageUpload').files[0];
     const notes = document.getElementById('notes').value;
 
-    const reader = new FileReader();
-    reader.onloadend = function() {
-        const imageData = profilePicture ? reader.result : '';
+    const submittedEntries = document.getElementById('submittedEntries');
+    const entry = document.createElement('div');
+    entry.classList.add('entry');
 
-        const entry = document.createElement('div');
-        entry.classList.add('entry');
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const imageUrl = imageUpload ? e.target.result : '';
+
         entry.innerHTML = `
             <div>
-                <strong>Name:</strong> ${name} <br>
-                <strong>Email:</strong> ${email} <br>
-                <strong>Date of Birth:</strong> ${dob} <br>
-                <strong>Gender:</strong> ${gender} <br>
-                <strong>Tax Payer:</strong> ${tax} <br>
-                <strong>Occupation:</strong> ${occupation} <br>
-                <strong>Notes:</strong> ${notes}
+                <p><strong>${name}</strong></p>
+                <p>${gender}</p>
+                <p>${email}</p>
+                <p>${dob}</p>
+                <p>${taxPayer}</p>
+                <p>${occupation}</p>
+                ${notes ? `<p>Notes: ${notes}</p>` : ''}
             </div>
-            ${imageData ? `<img src="${imageData}" alt="Profile Picture">` : ''}
+            <div>
+                ${imageUrl ? `<img src="${imageUrl}" alt="${name}'s picture">` : ''}
+            </div>
         `;
-        document.getElementById('entries').appendChild(entry);
+
+        submittedEntries.appendChild(entry);
+        submittedEntries.appendChild(document.createElement('hr'));
 
         document.getElementById('registrationForm').reset();
     };
 
-    if (profilePicture) {
-        reader.readAsDataURL(profilePicture);
+    if (imageUpload) {
+        reader.readAsDataURL(imageUpload);
     } else {
-        reader.onloadend();
+        reader.onload();
     }
 });
