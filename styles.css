@@ -4,7 +4,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #e0f7fa, #80deea);
+    background: linear-gradient(to bottom, #c4f0f5, #7fe3f1);
     margin: 0;
     padding: 20px;
     display: flex;
@@ -15,13 +15,13 @@ body {
 
 header {
     width: 100%;
-    background: linear-gradient(to right, #00bcd4, #009688);
+    background: linear-gradient(to right, #01adc4, #009688);
     padding: 20px;
     text-align: center;
     color: white;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border-radius: 8px;
 }
 
@@ -32,7 +32,7 @@ header {
     width: 100%;
     max-width: 1200px;
     background-color: #fff;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -67,12 +67,12 @@ form {
 .form-group {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
     min-width: 150px;
-    margin-right: 10px;
+    margin-right: 20px;
     font-weight: bold;
 }
 
@@ -80,7 +80,7 @@ form {
 .form-group select,
 .form-group textarea {
     flex: 1;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -91,16 +91,16 @@ textarea {
 
 .buttons {
     display: flex;
-    gap: 10px;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 button {
-    padding: 10px;
+    padding: 10px 20px;
     border: none;
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
-    margin-right: 10px;
 }
 
 button[type="submit"] {
@@ -119,7 +119,7 @@ button:hover {
     background-color: #e9f5e9;
     border: 1px solid #d4edda;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
@@ -134,14 +134,14 @@ button:hover {
 
 .entry div {
     flex: 1;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 hr {
     border: 0;
     height: 1px;
     background: #ddd;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 @media (max-width: 768px) {
