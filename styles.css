@@ -44,11 +44,19 @@ header {
     padding: 20px;
 }
 
-.blue-box {
-    background-color: #d9eaf7; 
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+.form-container {
+    border-right: 1px solid #ddd;
+}
+
+.display-container {
+    padding-left: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+h2, h3 {
+    color: #333;
+    text-align: center;
 }
 
 form {
@@ -86,7 +94,7 @@ textarea {
 }
 
 .optional-details hr {
-    display: none; /* Remove the line after "Occupation" */
+    display: none; /* Remove the line under "Picture" */
 }
 
 .buttons {
