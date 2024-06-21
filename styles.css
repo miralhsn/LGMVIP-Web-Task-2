@@ -40,7 +40,6 @@ header {
 .form-container,
 .display-container {
     flex: 1;
-    background: linear-gradient(to right, #beedf3, #a6f5ed);
     min-width: 300px;
     padding: 20px;
 }
