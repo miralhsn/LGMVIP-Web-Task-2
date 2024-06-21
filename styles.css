@@ -61,13 +61,22 @@ form {
     flex-direction: column;
 }
 
-label {
-    margin-bottom: 5px;
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    min-width: 150px;
+    margin-right: 10px;
     font-weight: bold;
 }
 
-input, select, textarea {
-    margin-bottom: 10px;
+.form-group input,
+.form-group select,
+.form-group textarea {
+    flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
