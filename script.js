@@ -3,6 +3,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
+    const dob = document.getElementById('dob').value;
     const gender = document.getElementById('gender').value;
     const taxPayer = document.querySelector('input[name="taxPayer"]:checked').value;
     const occupation = document.getElementById('occupation').value;
@@ -22,6 +23,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
                 <p><strong>${name}</strong></p>
                 <p>${gender}</p>
                 <p>${email}</p>
+                <p>${dob}</p>
                 <p>${taxPayer}</p>
                 <p>${occupation}</p>
                 ${notes ? `<p>Notes: ${notes}</p>` : ''}
