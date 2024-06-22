@@ -40,7 +40,7 @@ header {
     flex: 1;
     min-width: 300px;
     padding: 20px;
-    background-color: white; /* Form background white */
+    background-color: white; 
 }
 
 .form-container {
@@ -54,11 +54,11 @@ header {
 }
 
 .blue-box {
-    background-color: #cfe8fc; /* Light blue background */
+    background-color: #cfe8fc; 
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
 }
 
 h2, h3 {
@@ -107,16 +107,16 @@ textarea {
 
 .optional-details h3 {
     text-align: center;
-    margin-bottom: 10px; /* Space below the heading */
+    margin-bottom: 10px;
 }
 
 .optional-details .form-group {
-    margin-bottom: 15px; /* Adjust the space between elements */
+    margin-bottom: 15px; 
 }
 
 .buttons {
     display: flex;
-    justify-content: center; /* Center align the buttons */
+    justify-content: center;
     gap: 20px;
     margin-top: 20px;
 }
