@@ -32,7 +32,7 @@ This project is a web-based registration form with a display section for enrolle
 
 1. **Clone the Repository**:
     ```sh
-    git clone https://github.com/your-username/registration-form.git
+    git clone https://miralhsn.github.io/LGMVIP-Web-Task-2/
     ```
 2. **Open the Project**:
     Navigate to the project directory and open `index.html` in your web browser.
