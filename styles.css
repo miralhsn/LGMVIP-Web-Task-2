@@ -27,11 +27,9 @@ header {
 
 .container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
@@ -43,7 +41,6 @@ header {
     min-width: 300px;
     padding: 20px;
     background-color: white; /* Form background white */
-    border-radius: 8px;
 }
 
 .form-container {
@@ -58,7 +55,7 @@ header {
 
 .blue-box {
     background-color: #cfe8fc; /* Light blue background */
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow */
