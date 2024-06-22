@@ -30,25 +30,15 @@ header {
     max-width: 1200px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
-}
-
-.section-heading {
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .blue-box {
     background-color: #cfe8fc; /* Light blue background */
+    padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow */
-}
-
-.form-container,
-.display-container {
-    padding: 20px;
+    margin-bottom: 20px;
 }
 
 h2, h3 {
