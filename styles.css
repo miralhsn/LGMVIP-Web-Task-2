@@ -26,9 +26,6 @@ header {
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     width: 100%;
     max-width: 1200px;
     padding: 20px;
@@ -37,34 +34,25 @@ header {
     background-color: white;
 }
 
-.form-container,
-.display-container {
-    flex: 1;
-    min-width: 300px;
+.section-heading {
     padding: 20px;
-}
-
-.form-container {
-    border-right: 1px solid #ddd;
-}
-
-.display-container {
-    padding-left: 20px;
-    max-height: 70vh;
-    overflow-y: auto;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .blue-box {
     background-color: #cfe8fc; /* Light blue background */
-    padding: 20px;
     border-radius: 8px;
-    margin-bottom: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow */
+}
+
+.form-container,
+.display-container {
+    padding: 20px;
 }
 
 h2, h3 {
     color: #333;
-    text-align: center;
 }
 
 form {
